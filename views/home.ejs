@@ -1,0 +1,12 @@
+<%-include("partials/header")-%>
+<div class="container">
+  <h1>Home</h1>
+  <p><%=homeStartingContent%></p>
+  <%posts.forEach(function(i){%>
+  <h3><%=i.title%></h3>
+  <p><%=i.content.substring(0,100)%>...</p>
+  <a href="/posts/<%=i._id%>">Read More</a>
+  <%})%>
+</div>
+<a href="/compose" class="btn btn-large btn-primary add">+</a>
+<%-include('partials/footer')-%>
